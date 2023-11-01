@@ -8,7 +8,7 @@ const operationsHistory = [];
 calculator: do {
   const whatAction = prompt(
     `What action you want to do? Add, Diff, Mult, Div, Sqrt, Sin, Cos, ${
-      operationsHistory.length ? `,Histiry` : " "
+      operationsHistory.length ? `,History` : " "
     }`
   );
 
@@ -45,7 +45,6 @@ calculator: do {
 
         if (!Number.isInteger(firstNumber)) {
           alert("This is not an integer. Enter an integer number!");
-          firstNumber = undefined;
           continue;
         }
 
