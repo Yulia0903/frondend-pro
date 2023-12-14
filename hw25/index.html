@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      #slider-container {
+        max-width: 600px;
+        margin: auto;
+      }
+      #slider-image {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <div id="slider-container" class="mt-5">
+      <img
+        id="slider-image"
+        class="img-fluid"
+        src="https://via.placeholder.com/600x300"
+        alt="Slide 1"
+      />
+      <div class="text-center mt-2">
+        <button id="prevButton" class="btn btn-primary mr-2">Prev</button>
+        <button id="nextButton" class="btn btn-primary">Next</button>
+      </div>
+    </div>
+  </body>
+</html>
