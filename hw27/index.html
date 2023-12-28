@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .order {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4">
+          <div id="categories" class="list-group"></div>
+          <button
+            id="myOrdersButton"
+            class="btn btn-primary mt-2"
+            onclick="showMyOrders()"
+          >
+            Мої замовлення
+          </button>
+          <button
+            id="backToMainMenuButton"
+            class="btn btn-secondary mt-2"
+            style="display: none"
+            onclick="backToMainMenu()"
+          >
+            В головне меню
+          </button>
+        </div>
+        <div class="col-md-4">
+          <div id="products" class="list-group"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="productInfo"></div>
+          <div id="orderForm" style="display: none">
+            <h5>Форма оформлення замовлення</h5>
+            <form id="orderForm">
+              <div class="form-group">
+                <label for="fullName">ПІБ:</label>
+                <input type="text" class="form-control" id="fullName" />
+              </div>
+              <div class="form-group">
+                <label for="city">Місто:</label>
+                <input type="text" class="form-control" id="city" />
+              </div>
+              <div class="form-group">
+                <label for="deliveryPoint">Пункт доставки:</label>
+                <input type="text" class="form-control" id="deliveryPoint" />
+              </div>
+              <div class="form-group">
+                <label for="paymentMethod">Спосіб оплати:</label>
+                <input type="text" class="form-control" id="paymentMethod" />
+              </div>
+              <div class="form-group">
+                <label for="quantity">Кількість:</label>
+                <input type="number" class="form-control" id="quantity" />
+              </div>
+              <div class="form-group">
+                <label for="comment">Коментар:</label>
+                <textarea class="form-control" id="comment"></textarea>
+              </div>
+            </form>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="confirmOrder()"
+            >
+              Підтвердити замовлення
+            </button>
+          </div>
+          <button
+            id="buyButton"
+            class="btn btn-primary mt-2"
+            style="display: none"
+          >
+            Купити
+          </button>
+          <div id="purchaseMessage" style="display: none">Товар куплено!</div>
+          <div id="myOrders" style="display: none"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
